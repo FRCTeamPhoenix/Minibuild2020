@@ -1,17 +1,18 @@
 #include "commands/DriveJoystick.h"
 
+#include "subsystems/TankSubsystem.h"
 #include "Robot.h"
 
 DriveJoystick::DriveJoystick(){
-    Requires(Robot::getTankDrive());
+    Requires(TankSubsystem::getInstance());
 }
 
 void DriveJoystick::Initialize(){
-    Robot::getTankDrive()->setSpeed(0.0, 0.0);
+    TankSubsystem::getInstance()->setSpeed(0.0, 0.0);
 }
 
 void DriveJoystick::Execute(){
-    Robot::getTankDrive()->setSpeed(m_xboxController.GetRawAxis(1), -m_xboxController.GetRawAxis(5));
+    TankSubsystem::getInstance()->setSpeed(m_xboxController.GetRawAxis(1), -m_xboxController.GetRawAxis(5));
 }
 
 bool DriveJoystick::IsFinished(){
@@ -19,7 +20,7 @@ bool DriveJoystick::IsFinished(){
 }
 
 void DriveJoystick::End(){
-    Robot::getTankDrive()->setSpeed(0.0, 0.0);
+    TankSubsystem::getInstance()->setSpeed(0.0, 0.0);
 }
 
 void DriveJoystick::Interrupted(){

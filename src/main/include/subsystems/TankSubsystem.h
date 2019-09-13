@@ -7,13 +7,23 @@
 
 class TankSubsystem : public frc::Subsystem {
     public:
-        TankSubsystem();
+        //have a singleton based subsytem since you will only have 1 object
+        static TankSubsystem* getInstance(){
+            static TankSubsystem instance;
+            
+            return &instance;
+        }
+
+        //prevent copying
+        TankSubsystem(TankSubsystem const&) = delete;
+        void operator=(TankSubsystem const&)  = delete;
 
         void init();
 
         void setSpeed(const double& left, const double& right);
 
     private:
+        TankSubsystem();
 
         const int TIMEOUT = 10;
 

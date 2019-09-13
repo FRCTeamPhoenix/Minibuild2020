@@ -10,7 +10,6 @@
 #include <frc/commands/Scheduler.h>
 #include <frc/smartdashboard/SmartDashboard.h>
 
-TankSubsystem Robot::m_tankdrive;
 OI Robot::m_oi;
 
 void Robot::RobotInit() {

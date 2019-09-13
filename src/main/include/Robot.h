@@ -27,10 +27,7 @@ class Robot : public frc::TimedRobot {
   void TeleopPeriodic() override;
   void TestPeriodic() override;
 
-  static TankSubsystem* getTankDrive() { return &m_tankdrive; }
-
  private:
-  static TankSubsystem m_tankdrive;
   static OI m_oi;
 
   //store the drive joystick command
