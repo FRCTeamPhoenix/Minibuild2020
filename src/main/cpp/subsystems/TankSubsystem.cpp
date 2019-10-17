@@ -7,7 +7,7 @@ void TankSubsystem::init(){
     m_frontRight.ConfigSelectedFeedbackSensor(CTRE_MagEncoder_Relative, 0, TIMEOUT);
     
     m_backLeft.Follow(m_frontLeft);
-    m_backRight.Follow(m_backRight);
+    m_backRight.Follow(m_frontRight);
 
     m_frontLeft.SetInverted(false);
     m_backLeft.SetInverted(false);
