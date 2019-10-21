@@ -25,6 +25,5 @@ void TankSubsystem::init(){
 }
 
 void TankSubsystem::setSpeed(const double& left, const double& right){
-    m_frontLeft.Set(left);
-    m_frontRight.Set(right);
+    m_drive.TankDrive(left, right);
 }

@@ -2,6 +2,7 @@
 
 #include <frc/commands/Subsystem.h>
 #include <ctre/Phoenix.h>
+#include <frc/drive/DifferentialDrive.h>
 
 #include "RobotMap.h"
 
@@ -32,4 +33,5 @@ class TankSubsystem : public frc::Subsystem {
         WPI_TalonSRX m_backLeft = {TALON_BACK_LEFT};
         WPI_TalonSRX m_backRight = {TALON_BACK_RIGHT};
 
+        frc::DifferentialDrive m_drive = frc::DifferentialDrive(m_frontLeft, m_frontRight);
 };
