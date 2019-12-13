@@ -51,6 +51,7 @@ void Robot::AutonomousInit() {
 void Robot::AutonomousPeriodic() { frc::Scheduler::GetInstance()->Run(); }
 
 void Robot::TeleopInit() {
+  PCMHandler::getInstance()->turnOn();
   frc::Scheduler::GetInstance()->AddCommand(&m_driveJoystick);
 }
 

@@ -7,6 +7,9 @@
 
 #pragma once
 
+const int XBOX_BUTTON_LEFT_BUMPER = 5;
+const int XBOX_BUTTON_RIGHT_BUMPER = 6;
+
 class OI {
  public:
   OI();

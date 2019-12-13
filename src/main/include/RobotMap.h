@@ -28,3 +28,7 @@ const int TALON_FRONT_LEFT = 1;
 const int TALON_BACK_LEFT = 2;
 const int TALON_FRONT_RIGHT = 3;
 const int TALON_BACK_RIGHT = 4;
+
+const int PCM_CAN_ID = 11;
+const int SOLENOID_HIGH_GEAR = 6;
+const int SOLENOID_LOW_GEAR = 7;
