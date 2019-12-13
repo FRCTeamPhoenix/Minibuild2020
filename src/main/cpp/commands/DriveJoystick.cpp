@@ -12,7 +12,7 @@ void DriveJoystick::Initialize(){
 }
 
 void DriveJoystick::Execute(){
-    TankSubsystem::getInstance()->setSpeed(m_xboxController.GetRawAxis(1), -m_xboxController.GetRawAxis(5));
+    TankSubsystem::getInstance()->setSpeed(m_xboxController.GetRawAxis(1), m_xboxController.GetRawAxis(5));
 }
 
 bool DriveJoystick::IsFinished(){
